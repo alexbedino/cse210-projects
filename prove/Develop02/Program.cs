@@ -9,6 +9,7 @@ class Program
         while (running)
         {
             Console.WriteLine("What would you like to do?\n1. Write\n2. Display\n3. Load\n4. Save\n5. Quit\n");
+            Console.WriteLine();
             int choice = int.Parse(Console.ReadLine());
             switch (choice)
             {

@@ -24,6 +24,7 @@ public class Journal
         foreach (Entry entry in entries)
         {
             Console.WriteLine($"{entry.Date} {entry.Description}");
+            Console.WriteLine();
         }
     }
 
@@ -33,8 +34,7 @@ public class Journal
         {
             foreach (Entry entry in entries)
             {
-                outputFile.WriteLine(entry.Prompt);
-                outputFile.WriteLine(entry.Description);
+                outputFile.WriteLine($"{entry.Date} {entry.Description}");
                 outputFile.WriteLine();
             }
         }
