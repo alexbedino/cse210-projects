@@ -1,9 +1,9 @@
 using System;
 
-public class EternalGoal: Goal
+public class EternityGoal: Goal
 {
 
-    public EternalGoal(String name, String description, int completionScore) : base(name, description, completionScore, 0)
+    public EternityGoal(String name, String description, int completionScore) : base(name, description, completionScore, 0)
     {
         
     }
@@ -11,22 +11,22 @@ public class EternalGoal: Goal
    
     public override String Display()
     {
-        string completeSymbol = IsComplete() ? "X" : " ";
+        string completeSymbol = IsComplete() ? "O" : " ";
         return $"[{completeSymbol}] {_name}  ({_description})";
     }
     public override void DoGoal()
     {
-        _numberOfTimesCompleted++;
+        _timescompleted++;
     }
 
     public override String Save()
     {
-        return $"EternalGoal~||~{_name}~||~{_description}~||~{_completionScore}~||~{_numberOfTimesCompleted}";
+        return $"Eternity Goal~||~{_name}~||~{_description}~||~{_score}~||~{_timescompleted}";
     }
 
     public override int GetScore()
     {
-        return _completionScore * _numberOfTimesCompleted;
+        return _score * _timescompleted;
     }
 
     public override bool IsComplete()

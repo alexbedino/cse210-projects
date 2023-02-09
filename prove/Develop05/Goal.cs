@@ -1,25 +1,22 @@
+ 
 using System;
-
-public abstract class Goal{
-
-    protected String _name;
-    protected String _description;
-    protected int _completionScore;
-    protected int _numberOfTimesCompleted;
-
-    public Goal(String name, String description, int score, int completionScore){
+ public abstract class Goal
+{
+    protected string _name;
+    protected string _description;
+    protected int _score;
+    protected int _timescompleted;
+     // Constructor for Goal class 
+    public Goal(string name, string description, int score, int completionScore) 
+    {
         _name = name;
         _description = description;
-        _completionScore = completionScore;
+        _score = completionScore;
     }
-    
-    public abstract String Display();
-
-   public abstract void DoGoal();
-
-   public abstract int GetScore();
-
-   public abstract bool IsComplete();
-
-   public abstract String Save();
+     // Abstract methods declaration
+    public abstract string Display();
+    public abstract void DoGoal();
+    public abstract int GetScore();
+    public abstract bool IsComplete();
+    public abstract string Save();
 }
